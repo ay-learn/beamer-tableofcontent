@@ -1,0 +1,60 @@
+% Create a Table of Contents in Beamer
+\documentclass{beamer}
+% Theme choice:
+\usetheme{metropolis}
+% \usecolortheme{crane}
+
+% Title page details: 
+\title{How to make “outline” frame in Beamer?} 
+\author{latex-beamer.com}
+\date{\today}
+
+\AtBeginSection[]
+{
+\begin{frame}<beamer>{Table of Contents}
+\tableofcontents[currentsection,currentsubsection, 
+    hideothersubsections, 
+    sectionstyle=show/shaded,
+]
+\end{frame}
+}
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+% Outline frame
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+\section{section1}
+    \begin{frame}{section1}
+        section1 contenu
+    \end{frame}
+
+\section{section2}
+    \subsection{sebsection 2.1}
+        \begin{frame}{sebsection 2.1}
+            sebsection 2.1 contenu
+        \end{frame}
+    \subsection{sebsection 2.2}
+        \begin{frame}{sebsection 2.2}
+            sebsection 2.2 contenu
+        \end{frame}
+    \subsection{sebsection 2.3}
+        \begin{frame}{sebsection 2.3}
+            sebsection 2.3 contenu
+        \end{frame}
+\section{section3}
+    \begin{frame}{section3}
+        section3 contenu
+    \end{frame}
+\section*{References}
+    \begin{frame}{References}
+        References
+    \end{frame}
+ 
+\end{document}
